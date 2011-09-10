@@ -100,7 +100,6 @@ int printf(const char* fmt, ...) {
         if(c == '\0') {
             return 0;
         } else if(c != '%') {
-            _format_d(c, 10, false);
             putchar(c);
         } else {
             is_signed = true;
@@ -125,6 +124,12 @@ int printf(const char* fmt, ...) {
                 } else if(c == 's') {
                     s = va_arg(ap, const char*);
                     strncpy(format_buffer, s, 256);
+                    _pad_format_buffer(min_width, pad_character, pad_right);
+                    puts(format_buffer);
+                    break;
+                } else if(c == 'b') {
+                    n = va_arg(ap, unsigned int);
+                    _format_d(n, 2, false);
                     _pad_format_buffer(min_width, pad_character, pad_right);
                     puts(format_buffer);
                     break;

@@ -8,16 +8,16 @@ STARTUP(obj/kern/entry/entry.o)
 
 SECTIONS
 {
-	. = 0x8000;
-	.text :	{
-		*(.text)
-		}
+    . = 0x8000;
+    .text : {
+            *(.text)
+            }
 
-	.data :	{
-		*(.data)
-		}
+    .data : {
+            *(.data)
+            }
 
-	.bss :	{
-		*(.bss)
-		}
+    .bss  : {
+            *(.bss)
+            }
 }

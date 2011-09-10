@@ -14,7 +14,7 @@ LD="ld"
 LDSCRIPT="conf/kernel.ld"
 LDFLAGS="-T ${LDSCRIPT}"
 
-BOCHS="/home/christopher/downloads/src/bochs-2.4.1/bochs"
+BOCHS="bochs"
 
 case "$target" in
     run)

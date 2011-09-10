@@ -9,5 +9,5 @@ extern main
 global _start
 
 _start:
-	; Perform a jump into the kernels main routine
-	jmp main
+    ; Perform a jump into the kernels main routine
+    jmp main
